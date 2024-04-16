@@ -1,0 +1,47 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+//
+
+// Add extra styles here
+
+.app-ofgem {
+
+	.dwp-\!-background-grey {
+		background-color: #f8f8f8 !important;
+	}
+
+	.ds-grid-row--item:last-of-type {
+		margin-right: 0;
+	}
+
+	.govuk-\!-padding-4 {
+		padding: 20px !important;
+	}
+
+	.ds-grid-row--item {
+		float: none;
+		width: 25%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.ds-grid-row {
+		display: flex;
+		grid-template-columns: 1fr;
+		grid-gap: 30px;
+		margin: 0;
+		padding: 0;
+	}
+
+
+}
+
+.hn-task-list__status {
+	min-width: 150px;
+}
+
+.hn-notification__red {
+	border: 5px solid $govuk-error-colour;
+	background: $govuk-error-colour
+}
