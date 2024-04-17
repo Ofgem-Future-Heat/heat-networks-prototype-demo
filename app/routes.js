@@ -1511,7 +1511,7 @@ router.post('/add-heat-network/buildingsandconsumers/addresscustomers', function
                     res.redirect('/add-heat-network/buildingsandconsumers/buildings');
                 }            }
             else {
-                if (buildingtype == "Commercial" | commercialcustomers >= 1) {
+                if (buildingtype == "Commercial" | addresscustomersCommercial >= 1) {
                     res.redirect('/add-heat-network/buildingsandconsumers/microbusinesses');
                 }
                 else {
