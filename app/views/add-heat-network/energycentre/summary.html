@@ -62,7 +62,6 @@
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header ">Technology</th>
       <th scope="col" class="govuk-table__header ">Energy source</th>
-      <th scope="col" class="govuk-table__header ">Started</th>
       <th scope="col" class="govuk-table__header "></th>
 
     </tr>
@@ -72,14 +71,12 @@
           <tr class="govuk-table__row">
       <td class="govuk-table__cell">{{technology}} {% if loop.first %}<br /><strong class="govuk-tag govuk-!-margin-top-1 govuk-!-margin-bottom-1">Primary</strong>{% endif %}</td>
       <td class="govuk-table__cell">{{energysource}}</td>
-      <td class="govuk-table__cell">{{year}}</td>
       <td class="govuk-table__cell"><a href="#" class="govuk-link">Remove</a></td>
     </tr>
     {% endfor %}
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">{% if (data.techtechnology == "Other") %}{{data.techtechnologyother}}{% else %}{{data.techtechnology}}{% endif %} {% if data.technologies == null %}<br /><strong class="govuk-tag govuk-!-margin-top-1 govuk-!-margin-bottom-1">Primary</strong>{% endif %}</td>
       <td class="govuk-table__cell">{% if (data.techenergysource == "Other") %}{{data.techenergysourceother}}{% else %}{{data.techenergysource}}{% endif %}</td>
-      <td class="govuk-table__cell">{{data.techwhenmonth}} {{data.techwhenyear}}</td>
       <td class="govuk-table__cell"><a href="#" class="govuk-link">Remove</a></td>
 
     </tr>

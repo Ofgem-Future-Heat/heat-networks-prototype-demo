@@ -614,7 +614,7 @@ router.post('/add-heat-network/energycentre/address', function (req, res) {
 
         const apiKey = 'HDNGKBm2TGbHTt2mr4RxS2Ta0l2Gwth6';
         async function postcode(postcode) {
-            axios.get('https://api.os.uk/search/places/v2/postcode?postcode=' + postcode + '&dataset=LPI&key=' + apiKey, { httpsAgent })
+            axios.get('https://api.os.uk/search/places/v1/postcode?postcode=' + postcode + '&dataset=LPI&key=' + apiKey, { httpsAgent })
                 .then(function (response) {
                     var output = JSON.stringify(response.data, null, 2);
                     let parsed = JSON.parse(output).results;
@@ -916,7 +916,7 @@ router.post('/add-heat-network/energycentre/energysource', function (req, res) {
         });
     }
     else {
-        res.redirect('/add-heat-network/energycentre/when');
+        res.redirect('/add-heat-network/energycentre/summary');
     }
 });
 
