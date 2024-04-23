@@ -6,6 +6,12 @@
 
 {% block beforeContent %}
 
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            {{ super() }}
+        </div>
+    </div>
+
 {% if data['regulatory-check'] == 'Yes' %}
     {{ 'check' | redirect | safe }}
 {% endif %}
